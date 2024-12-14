@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        palette: {
+          primary: "#1F406C",
+          pearl: "#051D1F",
+          gray: "#b7b7b7",
+        },
       },
     },
   },

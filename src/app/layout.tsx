@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "PDL | نیرو ساعی درخش",
@@ -34,7 +35,10 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/images/site.webmanifest" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

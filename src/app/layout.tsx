@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "PDL | نیرو ساعی درخش",

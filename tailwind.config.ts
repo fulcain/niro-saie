@@ -14,6 +14,7 @@ export default {
         palette: {
           primary: "#1F406C",
           pearl: "#051D1F",
+          mirage: "#1B272A",
           gray: "#b7b7b7",
         },
       },

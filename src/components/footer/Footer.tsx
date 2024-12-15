@@ -1,22 +1,23 @@
 import Image from "next/image";
-import ContactUsCard from "./ContactUsCard";
+import FooterContactUsCard from "./contactUsCard/FooterContactUsCard";
 import FooterLinks from "./FooterLinks";
-import { footerLinks } from "@/constants";
+import { footerLinks } from "@/constants/footer";
 
 const Footer = () => {
   return (
-    <footer className="mt-52 p-[40px] bg-[url('/images/footer/footer-bg.png')] w-full bg-palette-pearl text-palette-gray">
+    <footer className="md:mt-52  pb-[60px] pt-[40px] bg-[url('/images/footer/footer-bg.png')] w-full bg-palette-pearl text-palette-gray">
       <div className="container">
-        <div className="flex items-center flex-row justify-between ">
-          <ContactUsCard />
+        <div className="flex items-center justify-center flex-col gap-5 md:flex-row md:justify-between">
+          <FooterContactUsCard />
+
           <FooterLinks links={footerLinks} title="خدمات" />
 
-          {/* TODO: add animation */}
           <Image
             src="/images/footer/footer-circle.png"
             alt="footer shape"
             width={130}
             height={130}
+            className="hidden md:block animate-scales"
           />
         </div>
       </div>

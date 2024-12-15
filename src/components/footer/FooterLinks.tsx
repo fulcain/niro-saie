@@ -12,8 +12,13 @@ const FooterLinks = ({ title, links }: FooterLinksProps) => {
     <div className="flex flex-col gap-y-5">
       <span className="text-white text-[18px]">{title}</span>
       <div className="flex flex-col gap-y-2.5">
-        {links.map((link) => (
-          <Link className="text-palette-gray" href={link.href}>
+        {links.map((link, idx) => (
+          <Link
+            key={idx}
+            className="text-palette-gray"
+            href={link.href || ""}
+            scroll={false}
+          >
             {link.name}
           </Link>
         ))}

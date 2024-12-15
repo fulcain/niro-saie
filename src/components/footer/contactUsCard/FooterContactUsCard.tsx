@@ -1,4 +1,4 @@
-import { footerContactUs } from "@/components/footer/footerTexts";
+import { footerContactUs } from "@/components/footer/footerConstants";
 import Image from "next/image";
 import FooterContactUsInfo from "./FooterContactUsInfo";
 import { FaInstagram } from "react-icons/fa6";

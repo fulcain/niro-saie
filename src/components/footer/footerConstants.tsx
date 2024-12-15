@@ -27,7 +27,6 @@ export const footerContactUs: FooterContactUsTypes[] = [
   },
 ];
 
-// footer
 export const footerLinks = [
   {
     name: "مهندسی",

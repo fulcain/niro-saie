@@ -5,7 +5,7 @@ import { footerLinks } from "@/constants/footer";
 
 const Footer = () => {
   return (
-    <footer className="md:mt-52  pb-[60px] pt-[40px] bg-[url('/images/footer/footer-bg.png')] w-full bg-palette-pearl text-palette-gray">
+    <footer className="mt-32 md:mt-52 pb-[130px] md:pb-[60px] pt-[40px] bg-[url('/images/footer/footer-bg.png')] w-full bg-palette-pearl text-palette-gray">
       <div className="container">
         <div className="flex items-center justify-center flex-col gap-5 md:flex-row md:justify-between">
           <FooterContactUsCard />

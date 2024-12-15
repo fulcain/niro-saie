@@ -20,7 +20,7 @@ const Header = () => {
               <a
                 key={idx}
                 href={item.href}
-                className="font-[100] text-[14px] md:text-[20px]"
+                className="font-[100] text-[14px] md:text-[20px] transition hover:text-palette-primary"
               >
                 {item.text}
               </a>

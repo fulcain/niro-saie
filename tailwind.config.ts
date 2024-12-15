@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
         palette: {
           primary: "#1F406C",
+          secondary: "#3D72FC",
           pearl: "#051D1F",
           mirage: "#1B272A",
           gray: "#b7b7b7",

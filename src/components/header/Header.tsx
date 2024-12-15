@@ -20,7 +20,7 @@ const Header = () => {
               <a
                 key={idx}
                 href={item.href}
-                className="font-[100] text-[14px] md:text-[20px] transition hover:text-palette-primary"
+                className="font-[100] text-[14px] md:text-[20px] transition hover:text-palette-secondary"
               >
                 {item.text}
               </a>
@@ -33,7 +33,7 @@ const Header = () => {
               <FaPhone className="text-palette-primary" />
               <a
                 href={`tel:${phoneNumber}`}
-                className="text-palette-gray mt-[2px]"
+                className="text-palette-gray mt-[2px] hover:text-palette-primary transition"
               >
                 {phoneNumber}
               </a>

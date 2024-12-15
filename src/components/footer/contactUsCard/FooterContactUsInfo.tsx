@@ -1,4 +1,4 @@
-import { FooterContactUsTypes } from "@/constants/footer";
+import { FooterContactUsTypes } from "@/components/footer/footerTexts";
 import Link from "next/link";
 
 type FooterContactUsInfoProps = {

@@ -1,5 +1,5 @@
 import { FaRegClock, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { phoneNumber } from "..";
+import { phoneNumber } from "../../constants";
 
 export type FooterContactUsTypes = {
   title: string;

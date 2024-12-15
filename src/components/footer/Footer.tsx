@@ -1,7 +1,7 @@
 import Image from "next/image";
 import FooterContactUsCard from "./contactUsCard/FooterContactUsCard";
 import FooterLinks from "./FooterLinks";
-import { footerLinks } from "@/constants/footer";
+import { footerLinks } from "@/components/footer/footerTexts";
 
 const Footer = () => {
   return (

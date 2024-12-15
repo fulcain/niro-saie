@@ -16,10 +16,10 @@ const Service = ({
         {title}
       </h3>
       <p className="description text-center text-[14px] md:text-[18px] text-gray-500">
-        {description.map((item) => (
-          <>
+        {description.map((item, idx) => (
+          <span key={idx}>
             {item} <br />
-          </>
+          </span>
         ))}
       </p>
     </div>

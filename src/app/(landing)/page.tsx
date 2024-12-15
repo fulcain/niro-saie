@@ -1,7 +1,9 @@
+import Services from "./(services)/Services";
+
 export default function Home() {
   return (
-    <>
-      <main></main>
-    </>
+    <main className="grid gap-[24px]">
+      <Services />
+    </main>
   );
 }

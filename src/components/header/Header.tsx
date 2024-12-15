@@ -5,8 +5,8 @@ import { phoneNumber } from "@/constants";
 
 const Header = () => {
   return (
-    <nav className="sticky top-0 z-10">
-      <div className="container flex justify-center md:justify-between">
+    <nav className="sticky top-0 z-10 bg-white shadow">
+      <div className="container flex md:justify-between">
         <div id="right-side" className="flex items-center gap-[40px]">
           <Image
             src="/images/general/niro-saei.png"

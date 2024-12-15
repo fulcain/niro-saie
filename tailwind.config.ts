@@ -8,6 +8,22 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        scales: {
+          "0%": {
+            transform: "scale(1.0)",
+          },
+          "50%": {
+            transform: "scale(1.2)",
+          },
+          "100%": {
+            transform: "scale(1.0)",
+          },
+        },
+      },
+      animation: {
+        scales: "scales 2s linear infinite",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.scss";
+import { Vazirmatn } from "next/font/google";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
+
+const vazir = Vazirmatn({
+  subsets: ["arabic"],
+});
 
 export const metadata: Metadata = {
   title: "PDL | نیرو ساعی درخش",
@@ -17,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
+    <html lang="fa" dir="rtl" className={vazir.className}>
       <head>
         <link
           rel="apple-touch-icon"

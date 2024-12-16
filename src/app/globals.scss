@@ -1,5 +1,5 @@
-@use "../assets/fonts/Yekan/yekan";
-@use "../assets/fonts/iransansNum/iranSans";
+/* @use "../assets/fonts/Yekan/yekan"; */
+/* @use "../assets/fonts/iransansNum/iranSans"; */
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +7,6 @@
 
 
 * {
-  font-family: "IranSansNumber", "Yekan", "tahoma";
 
   // Enable font feature setting 'ss02' for Firefox
   -moz-font-feature-settings: "ss02";

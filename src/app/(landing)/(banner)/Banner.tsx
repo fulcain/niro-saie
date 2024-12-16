@@ -38,7 +38,7 @@ const Banner = () => {
             key={idx}
             className="banner-text gap-[25px] !flex w-fit items-center justify-between px-2"
           >
-            <span className="text-[30px] md:text-[45px]">{item}</span>
+            <span className="text-[20px] md:text-[30px]">{item}</span>
             <div className="w-[5px] h-[35px] bg-white skew-x-[25deg]"></div>
           </SwiperSlide>
         ))}

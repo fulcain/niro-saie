@@ -1,9 +1,11 @@
+import React from "react";
+
 const Service = ({
   logo,
   title,
   description,
 }: {
-  logo: any;
+  logo: React.ReactNode;
   title: string;
   description: string[];
 }) => {

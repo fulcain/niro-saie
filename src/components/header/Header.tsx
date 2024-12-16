@@ -2,19 +2,22 @@ import Image from "next/image";
 import { links } from "./linksData";
 import { FaPhone, FaLocationDot } from "react-icons/fa6";
 import { phoneNumber } from "@/constants";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <nav className="sticky top-0 z-10 bg-white shadow">
       <div className="container flex md:justify-between">
         <div id="right-side" className="flex items-center gap-[40px]">
-          <Image
-            src="/images/general/niro-saei.png"
-            width={90}
-            height={0}
-            alt="PDL"
-            className="w-[50px] md:w-[90px]"
-          />
+          <Link href="/">
+            <Image
+              src="/images/general/niro-saei.png"
+              width={90}
+              height={0}
+              alt="PDL"
+              className="w-[50px] md:w-[90px]"
+            />
+          </Link>
           <div id="links" className="flex gap-5">
             {links.map((item, idx) => (
               <a

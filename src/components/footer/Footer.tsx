@@ -5,6 +5,7 @@ import { footerLinks } from "@/components/footer/footerConstants";
 
 const Footer = () => {
   return (
+    // TODO: fix bg
     <footer className="mt-32 md:mt-52 pb-[130px] md:pb-[60px] pt-[40px] bg-[url('/images/footer/footer-bg.png')] w-full bg-palette-pearl text-palette-gray">
       <div className="container">
         <div className="flex items-center justify-center flex-col gap-5 md:flex-row md:justify-between">

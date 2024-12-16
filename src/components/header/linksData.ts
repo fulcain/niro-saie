@@ -1,18 +1,18 @@
 export const links = [
   {
-    href: "#services",
+    href: "/#services",
     text: "خدمات",
   },
   {
-    href: "#about-us",
+    href: "/#about-us",
     text: "درباره ما",
   },
   {
-    href: "#contact-us",
+    href: "/#contact-us",
     text: "تماس با ما",
   },
   {
-    href: "#documents",
+    href: "/#documents",
     text: "جزوه ها",
   },
 ];

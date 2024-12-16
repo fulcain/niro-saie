@@ -20,14 +20,14 @@ const Header = () => {
           </Link>
           <div id="links" className="flex gap-5">
             {links.map((item, idx) => (
-              <a
+              <Link
                 key={idx}
                 href={item.href}
                 className="relative group font-[200] text-[14px] md:text-[20px] transition hover:text-palette-secondary"
               >
                 {item.text}
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-palette-secondary transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

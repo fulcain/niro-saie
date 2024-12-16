@@ -3,7 +3,8 @@ import CompanyStatus from "./(company_status)/CompanyStatus";
 import Hero from "./(hero)/Hero";
 import Personel from "./(personel)/page";
 import Services from "./(services)/Services";
-import AboutUs from "./(about-us)/page";
+import AboutUs from "./(about-us)/AboutUs";
+import Documents from "./(documents)/Documents";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <AboutUs />
       <Personel />
+      <Documents />
       <Banner />
     </main>
   );

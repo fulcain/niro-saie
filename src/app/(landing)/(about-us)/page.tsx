@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <section className="flex flex-col gap-[40px]">
+    <section className="flex flex-col gap-[40px]" id="about-us">
       <SectionTitle subTitle="درباره ما" title="Power Diligence Luminosity" />
       <div className="content flex relative items-center p-5 min-h-[400px] bg-palette-pearl overflow-hidden">
         <Image

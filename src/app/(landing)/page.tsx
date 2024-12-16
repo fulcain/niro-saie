@@ -1,5 +1,5 @@
 import Banner from "./(banner)/Banner";
-import Hero from "./(hero)/Hero";
+import Personel from "./(personel)/page";
 import Services from "./(services)/Services";
 
 export default function Home() {

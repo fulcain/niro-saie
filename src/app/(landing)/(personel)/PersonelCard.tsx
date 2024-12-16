@@ -22,7 +22,7 @@ const PersonelCard = ({
         {/* Image */}
         <div className="logo">
           <Image
-            src="/images/general/sample-avatar.jpg"
+            src={image}
             alt={name}
             width={0}
             height={0}

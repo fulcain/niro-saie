@@ -1,25 +1,12 @@
-/* @use "../assets/fonts/Yekan/yekan"; */
-/* @use "../assets/fonts/iransansNum/iranSans"; */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 * {
-
-  // Enable font feature setting 'ss02' for Firefox
-  -moz-font-feature-settings: "ss02";
-
-  // Enable font feature setting 'ss02' for Webkit-based browsers
-  -webkit-font-feature-settings: "ss02";
-
-  // Enable font feature setting 'ss02' for other browsers
-  font-feature-settings: "ss02";
-
   scroll-behavior: smooth;
-
   box-sizing: border-box;
+  scroll-margin-top: 150px;
 }
 
 .container {

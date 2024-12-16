@@ -33,6 +33,7 @@ export default {
           pearl: "#051D1F",
           mirage: "#1B272A",
           gray: "#b7b7b7",
+          selago: "#ecf2fc",
         },
       },
     },

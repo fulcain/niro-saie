@@ -14,7 +14,7 @@ const SectionTitle = ({
         </h5>
         <span className="h-[2px] w-[30px] bg-palette-primary"></span>
       </div>
-      <h2 className="text-palette-pearl text-[30px] md:text-[40px]">{title}</h2>
+      <h2 className="text-palette-pearl text-[25px] md:text-[40px]">{title}</h2>
     </div>
   );
 };

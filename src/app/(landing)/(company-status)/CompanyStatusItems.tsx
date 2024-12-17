@@ -4,7 +4,7 @@ import { companyStatusData } from "./companyStatusData";
 const CompanyStatusItems = () => {
   const divider1 = (
     <Image
-      src="/images/companyStatus/divider-1.svg"
+      src="/images/company-status/divider-1.svg"
       width={95}
       height={30}
       alt="divider 1"
@@ -14,7 +14,7 @@ const CompanyStatusItems = () => {
 
   const divider2 = (
     <Image
-      src="/images/companyStatus/divider-2.svg"
+      src="/images/company-status/divider-2.svg"
       width={95}
       height={30}
       alt="divider 2"

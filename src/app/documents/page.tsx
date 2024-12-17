@@ -1,10 +1,4 @@
-"use client";
-
-import Document from "@/components/Document";
 import SectionTitle from "@/components/SectionTitle";
-import { documents } from "@/data/documents";
-import ReactPaginate from "react-paginate";
-import { useState } from "react";
 import "./_pagination.scss";
 import PaginatedItems from "./PaginatedItems";
 

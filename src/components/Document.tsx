@@ -28,10 +28,10 @@ const Document = ({
           height={0}
           layout="responsive"
           alt="pdf"
-          className="absolute !w-[180px] left-[50%] translate-x-[-50%] top-[8px] z-[1]"
+          className="absolute !w-[140px] md:!w-[180px] left-[50%] translate-x-[-50%] top-[8px] z-[1]"
         />
-        <div className="bg-palette-primary h-[70px]"></div>
-        <div className="bg-gray-100 h-[150px] relative">
+        <div className="bg-palette-primary h-[50px] md:h-[70px]"></div>
+        <div className="bg-gray-100 h-[100px] md:h-[150px] relative">
           <div className="absolute w-[55px] h-[55px] right-0 bottom-0 bg-palette-primary flex flex-col text-white items-center justify-center">
             <span className="font-[700]">{day}</span>
             <span>{month}</span>

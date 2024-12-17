@@ -15,7 +15,7 @@ const FaqSection = () => {
             extraClasses="top-[-20px] right-[-20px] md:top-[-40px] md:right-[-30px]"
           />
           <Image
-            src="/images/faq/faq.svg"
+            src="/images/faq/faq.png"
             alt="faq"
             width={300}
             height={285}

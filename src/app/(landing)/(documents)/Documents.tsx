@@ -1,10 +1,27 @@
+"use client";
+
 import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
 import Document from "@/components/Document";
 import { documents } from "@/data/documents";
+import { useEffect, useState } from "react";
 
 const Documents = () => {
-  const lastThreeDocuments = documents.slice(0, 3);
+  const [deviceType, setDeviceType] = useState<"desktop" | "mobile">("desktop");
+
+  useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 800px)").matches;
+    setDeviceType(isMobile ? "mobile" : "desktop");
+  }, []);
+
+  const getDocumentsForView = (deviceType: string) => {
+    return deviceType === "mobile"
+      ? documents.slice(0, 1)
+      : documents.slice(0, 3);
+  };
+
+  const lastDocuments = getDocumentsForView(deviceType);
+
   return (
     <section id="documents">
       <div className="container flex flex-col gap-[40px]">
@@ -14,7 +31,7 @@ const Documents = () => {
           className="flex flex-wrap justify-center gap-10"
         >
           {documents.length >= 1 ? (
-            lastThreeDocuments.map((item, idx) => (
+            lastDocuments.map((item, idx) => (
               <Document
                 key={idx}
                 title={item.title}

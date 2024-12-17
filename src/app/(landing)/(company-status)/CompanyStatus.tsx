@@ -3,10 +3,10 @@ import CompanyStatusItems from "./CompanyStatusItems";
 
 const CompanyStatus = () => {
   return (
-    <div className="container ">
+    <section className="container ">
       <SectionTitle title="استراتژی شرکت ما" subTitle="وضعیت شرکت ما" />
       <CompanyStatusItems />
-    </div>
+    </section>
   );
 };
 

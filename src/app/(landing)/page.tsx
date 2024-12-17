@@ -1,5 +1,5 @@
 import Banner from "./(banner)/Banner";
-import CompanyStatus from "./(company_status)/CompanyStatus";
+import CompanyStatus from "./(company-status)/CompanyStatus";
 import Hero from "./(hero)/Hero";
 import Personel from "./(personel)/page";
 import Services from "./(services)/Services";

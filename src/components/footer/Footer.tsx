@@ -16,7 +16,7 @@ const Footer = () => {
           <Image
             src="/images/footer/footer-circle.png"
             alt="footer shape"
-            width={130}
+            width={180}
             height={130}
             className="hidden md:block animate-scales"
           />

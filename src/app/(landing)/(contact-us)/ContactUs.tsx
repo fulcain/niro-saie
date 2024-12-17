@@ -27,12 +27,6 @@ const ContactUs = () => {
             <LinkUnderLine text={phoneNumber} href={`tel:${phoneNumber}`} />
           </div>
         </div>
-        <Image
-          src="/images/contact-us/operator.png"
-          width={300}
-          height={340}
-          alt="contact-us"
-        />
         <Link
           className="text-white absolute top-1/2 -translate-y-1/2 left-10 rotate-270 bg-palette-primary hover:bg-white hover:text-black p-2 rounded-[12px] transition"
           href={`tel:${phoneNumber}`}

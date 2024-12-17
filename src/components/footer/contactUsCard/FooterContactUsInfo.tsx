@@ -1,4 +1,5 @@
 import { FooterContactUsTypes } from "@/components/footer/footerConstants";
+import LinkUnderLine from "@/components/link-underline/LinkUnderline";
 import Link from "next/link";
 
 type FooterContactUsInfoProps = {
@@ -11,13 +12,7 @@ const FooterContactUsInfo = ({ info }: FooterContactUsInfoProps) => {
       <div className="flex flex-row gap-2 justify-center items-center">
         {info.icon}
         {info.href ? (
-          <Link
-            href={info.href}
-            className="relative group hover:text-palette-primary transition"
-          >
-            {info.title}
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-palette-primary transition-all duration-300 group-hover:w-full"></span>
-          </Link>
+          <LinkUnderLine text={info.title} href={info.href} />
         ) : (
           info.title
         )}

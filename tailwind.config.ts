@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      rotate: {
+        "270": "270deg",
+      },
       screens: {
         "between-lg-md": "1154px",
       },

@@ -6,6 +6,7 @@ import Services from "./(services)/Services";
 import AboutUs from "./(about-us)/AboutUs";
 import Documents from "./(documents)/Documents";
 import FaqSection from "./(faq)/FaqSection";
+import ContactUs from "./(contact-us)/ContactUs";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <CompanyStatus />
       <FaqSection />
+      <ContactUs />
       <Services />
       <AboutUs />
       <Personel />

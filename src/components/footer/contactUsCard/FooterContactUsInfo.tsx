@@ -1,6 +1,5 @@
 import { FooterContactUsTypes } from "@/components/footer/footerConstants";
 import LinkUnderLine from "@/components/link-underline/LinkUnderline";
-import Link from "next/link";
 
 type FooterContactUsInfoProps = {
   info: FooterContactUsTypes;

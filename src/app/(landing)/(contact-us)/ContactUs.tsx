@@ -9,7 +9,7 @@ const ContactUs = () => {
     <section id="contact-us" className="container">
       <SectionTitle title="راه ارتباط با ما" subTitle="ارتباط با ما" />
       {/* TODO: change image color */}
-      <div className="relative flex flex-col md:flex-row gap-x-20 gap-y-4 items-center p-3 mt-[60px] bg-[url('/images/contact-us/contact-us-bg.png')] bg-cover bg-no-repeat bg-center w-full h-auto rounded-[10px]">
+      <div className="relative flex flex-col md:flex-row gap-x-20 gap-y-7 items-center p-3 mt-[60px] bg-[url('/images/contact-us/contact-us-bg.png')] bg-cover bg-no-repeat bg-center w-full h-auto rounded-[10px]">
         <CallNow />
         <div className="flex flex-col gap-4 text-white">
           <div className="flex flex-row gap-1 items-start justify-center text-[22px]">

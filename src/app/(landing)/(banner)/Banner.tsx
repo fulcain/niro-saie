@@ -3,8 +3,6 @@
 import { bannerTexts } from "./bannerTexts";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "./_banner.scss";
 
 const Banner = () => {
   const duplicatedTexts: string[] = [];

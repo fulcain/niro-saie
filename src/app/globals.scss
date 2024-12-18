@@ -1,3 +1,8 @@
+@use "/src/app/documents/pagination";
+@use "/src/app/(landing)/(banner)/banner";
+@use "/src/app/(landing)/(contact-us)/contact-us";
+@use "/src/app/(landing)/(faq)/faq";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,6 +52,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -79,6 +85,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

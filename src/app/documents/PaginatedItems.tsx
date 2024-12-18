@@ -3,7 +3,6 @@ import { documents } from "@/data/documents";
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
 import Document from "@/components/Document";
-import { PageClickEvent } from "react-paginate";
 
 const PaginatedItems = ({ itemsPerPage }: { itemsPerPage: number }) => {
   const [itemOffset, setItemOffset] = useState(0);
@@ -12,7 +11,7 @@ const PaginatedItems = ({ itemsPerPage }: { itemsPerPage: number }) => {
   const currentItems = documents.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(documents.length / itemsPerPage);
 
-  const handlePageClick = (event: PageClickEvent) => {
+  const handlePageClick = (event: any) => {
     const newOffset = (event.selected * itemsPerPage) % documents.length;
     setItemOffset(newOffset);
   };

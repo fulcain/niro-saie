@@ -11,10 +11,12 @@ const PaginatedItems = ({ itemsPerPage }: { itemsPerPage: number }) => {
   const currentItems = documents.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(documents.length / itemsPerPage);
 
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   const handlePageClick = (event: any) => {
     const newOffset = (event.selected * itemsPerPage) % documents.length;
     setItemOffset(newOffset);
   };
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   return (
     <>

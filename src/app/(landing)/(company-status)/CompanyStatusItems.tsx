@@ -33,11 +33,11 @@ const CompanyStatusItems = () => {
           const divider = !isLast ? (isEven ? divider1 : divider2) : null;
 
           return (
-            <div className="flex items-center justify-center relative">
-              <div
-                className="flex items-center gap-6 justify-center flex-col"
-                key={idx}
-              >
+            <div
+              key={idx}
+              className="flex items-center justify-center relative"
+            >
+              <div className="flex items-center gap-6 justify-center flex-col">
                 <Image
                   src={item.icon}
                   alt={item.title}

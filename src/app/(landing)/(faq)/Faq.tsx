@@ -17,7 +17,7 @@ const Faq = () => {
       dir="rtl"
     >
       {faqs.map((faq, idx) => (
-        <AccordionItem value={`item-${idx + 1}`}>
+        <AccordionItem key={idx} value={`item-${idx + 1}`}>
           <AccordionTrigger className="px-4 data-[state=open]:text-white data-[state=open]:bg-palette-primary">
             <div className="flex items-center justify-center gap-2">
               <FaCheckCircle className="text-palette-primary accordion-check-icon" />

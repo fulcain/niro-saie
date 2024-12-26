@@ -1,7 +1,6 @@
 import SectionTitle from "@/components/SectionTitle";
 import { phoneNumber } from "@/constants";
 import Link from "next/link";
-import "./_contact-us.scss";
 import CallNow from "./CallNow";
 
 const ContactUs = () => {
@@ -13,10 +12,7 @@ const ContactUs = () => {
         <div className="flex flex-col gap-4 text-white">
           <div className="flex flex-row gap-1 items-start justify-center text-[22px]">
             <p>شرکت نیرو ساعی</p>{" "}
-            <Link
-              className="text-palette-primary"
-              href={`tel:${phoneNumber}`}
-            >
+            <Link className="text-palette-primary" href={`tel:${phoneNumber}`}>
               اکنون تماس بگیرید!
             </Link>
           </div>

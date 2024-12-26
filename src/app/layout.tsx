@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
+import "swiper/css";
 import { Vazirmatn } from "next/font/google";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";

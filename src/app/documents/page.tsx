@@ -1,5 +1,4 @@
 import SectionTitle from "@/components/SectionTitle";
-import "./_pagination.scss";
 import PaginatedItems from "./PaginatedItems";
 
 const Documents = () => {

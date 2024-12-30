@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="bg-[url('/images/hero/hero-bg.png')] h-[80vh] md:h-[100vh] bg-no-repeat bg-center bg-cover relative">
+    <section className="bg-[url('/images/hero/hero-background.png')] h-[80vh] md:h-[100vh] bg-no-repeat bg-center bg-cover relative">
       <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-palette-primary/20 to-palette-primary"></div>
       <div className="absolute inset-0 bg-palette-primary/85 md:hidden"></div>
       <div className="container z-2 text-white flex justify-start items-center h-full relative p-[10px]">

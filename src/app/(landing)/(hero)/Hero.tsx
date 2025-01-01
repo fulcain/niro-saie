@@ -1,3 +1,4 @@
+import { appName } from "@/constants";
 import Link from "next/link";
 
 const Hero = () => {
@@ -8,9 +9,7 @@ const Hero = () => {
       <div className="container z-2 text-white flex justify-start items-center h-full relative p-[10px]">
         <div className="flex flex-col justify-between gap-[50px]">
           <div className="title">
-            <h1 className="text-[25px] md:text-[50px]">
-              Power Diligence Luminosity
-            </h1>
+            <h1 className="text-[25px] md:text-[50px]">{appName}</h1>
             <h2 className="text-[15px] text-palette-secondary md:text-[40px]">
               نیرو ساعی درخش
             </h2>

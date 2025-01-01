@@ -3,7 +3,7 @@ import Image from "next/image";
 import FooterContactUsInfo from "./FooterContactUsInfo";
 import { FaInstagram } from "react-icons/fa6";
 import Link from "next/link";
-import { instagram } from "@/constants";
+import { appName, instagram } from "@/constants";
 
 const FooterContactUsCard = () => {
   return (
@@ -17,7 +17,7 @@ const FooterContactUsCard = () => {
           height={105}
         />
         <span className="min-w-full text-white text-[12px] md:text-[14px] ">
-          Power Diligence Luminosity
+          {appName}
         </span>
       </div>
       <div className="flex flex-col gap-3">

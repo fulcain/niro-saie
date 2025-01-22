@@ -1,20 +1,20 @@
 export const personelInfo = [
   {
-    name: "نام کارمند",
-    image: "/images/general/sample-avatar.jpg",
-    role: "نقش کارمند",
+    name: "آریا آب آذر",
+    image: "/images/personel/logo.png",
+    role: "رئیس هیئت مدیره",
     instagramLink: "#",
   },
   {
-    name: "نام کارمند",
-    image: "/images/general/sample-avatar.jpg",
-    role: "نقش کارمند",
+    name: "شاهین ریاحی",
+    image: "/images/personel/logo.png",
+    role: "نایب رئیس هیئت مدیره",
     instagramLink: "#",
   },
   {
-    name: "نام کارمند",
-    image: "/images/general/sample-avatar.jpg",
-    role: "نقش کارمند",
+    name: "ابراهیم مظفری",
+    image: "/images/personel/logo.png",
+    role: "مدیر عامل و عضو اصلی هیئت مدیره",
     instagramLink: "#",
   },
 ];

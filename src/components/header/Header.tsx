@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { links } from "./linksData";
 import { FaPhone, FaLocationDot } from "react-icons/fa6";
-import { phoneNumber } from "@/constants";
+import { phoneNumber, address } from "@/constants";
 import Link from "next/link";
 
 const Header = () => {
@@ -36,6 +36,7 @@ const Header = () => {
             <FaPhone className="text-palette-primary" />
             <a
               href={`tel:${phoneNumber}`}
+              target="_blank"
               className="text-palette-gray mt-[2px] hover:text-palette-primary transition"
             >
               {phoneNumber}
@@ -45,10 +46,11 @@ const Header = () => {
           <div className="item flex gap-2 items-center">
             <FaLocationDot className="text-palette-primary" />
             <a
-              href="#"
+              href={address}
+              target="_blank"
               className="text-palette-gray hover:text-palette-primary transition"
             >
-              ایران، بوشهر
+              آدرس شرکت
             </a>
           </div>
         </div>

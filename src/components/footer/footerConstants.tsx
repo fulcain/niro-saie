@@ -1,5 +1,5 @@
 import { FaRegClock, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { phoneNumber } from "../../constants";
+import { address, phoneNumber } from "../../constants";
 
 export type FooterContactUsTypes = {
   title: string;
@@ -15,9 +15,11 @@ export const footerContactUs: FooterContactUsTypes[] = [
     icon: <FaRegClock className="text-palette-primary" />,
   },
   {
-    title: "ایران، بوشهر",
+    title:
+      "ایران، بوشهر، ریشهر، خیابان سلمان فارسی، خیابان پارسیان، نبش کوچه قلعه یک",
     subTitle: "",
     icon: <FaMapMarkerAlt className="text-palette-primary" />,
+    href: `${address}`,
   },
   {
     title: phoneNumber,

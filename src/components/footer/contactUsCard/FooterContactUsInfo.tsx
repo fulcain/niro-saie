@@ -9,7 +9,7 @@ const FooterContactUsInfo = ({ info }: FooterContactUsInfoProps) => {
   return (
     <div className="flex flex-col items-start">
       <div className="flex flex-row gap-2 justify-center items-center">
-        {info.icon}
+        <div>{info.icon}</div>
         {info.href ? (
           <LinkUnderLine text={info.title} href={info.href} />
         ) : (

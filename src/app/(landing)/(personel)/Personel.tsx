@@ -4,20 +4,19 @@ import { personelInfo } from "./personelInfo";
 
 const Personel = () => {
   return (
-    <section className="p-5">
-      <div className="container flex flex-col gap-[40px]">
+    <section className="bg-gradient-to-b from-white to-slate-50/70 py-12 md:py-24">
+      <div className="container flex flex-col gap-8 md:gap-12">
         <SectionTitle
           title="با اعضای تیم ما آشنا شوید"
           subTitle="اعضای تیم ما"
         />
-        <div id="personel" className="flex flex-wrap gap-5 justify-center">
+        <div id="personel" className="grid grid-cols-1 gap-4 md:flex md:flex-wrap md:justify-center md:gap-5">
           {personelInfo.map((item, idx) => (
             <PersonelCard
               key={idx}
               image={item.image}
               name={item.name}
               role={item.role}
-              instagramLink={item.instagramLink}
             />
           ))}
         </div>

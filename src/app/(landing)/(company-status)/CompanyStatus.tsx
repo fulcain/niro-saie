@@ -3,7 +3,7 @@ import CompanyStatusItems from "./CompanyStatusItems";
 
 const CompanyStatus = () => {
   return (
-    <section className="container ">
+    <section className="container py-12 md:py-24">
       <SectionTitle title="استراتژی شرکت ما" subTitle="وضعیت شرکت ما" />
       <CompanyStatusItems />
     </section>

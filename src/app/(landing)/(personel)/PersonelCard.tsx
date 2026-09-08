@@ -8,35 +8,25 @@ const PersonelCard = ({
   name: string;
   image: string;
   role: string;
-  instagramLink: string;
 }) => {
   return (
-    <div className="group overflow-hidden relative rounded-[20px] p-2 bg-palette-selago w-[270px] h-full md:w-[370px]  flex flex-col justify-between items-center">
-      {/* Background skew effect */}
-      <span className="absolute inset top-[-2px] duration-[500ms] z-[1] transition group-hover:bg-gray-300 bg-gray-200 skew-x-[-38deg] h-[110%] w-[50%]"></span>
-
-      {/* Content */}
-      <div className="content gap-10 z-[2] p-5 h-full flex flex-col justify-between">
-        {/* Image */}
-        <div className="logo">
-          <Image
-            src={image}
-            alt={name}
-            width={0}
-            height={0}
-            layout="responsive"
-            className="rounded-[20px] w-full max-w-[300px]"
-          />
-        </div>
-
-        {/* Info Section */}
-        <div className="info flex gap-10 justify-start cursor-pointer items-center">
-          {/* Name and Role */}
-          <div id="info-section">
-            <h3 className="font-[700] text-[18px]">{name}</h3>
-            <span className="font-[200] text-[16px]">{role}</span>
-          </div>
-        </div>
+    <div className="card card-hover group flex w-full items-center gap-4 p-4 sm:p-5 md:w-[300px] md:flex-col md:items-center md:gap-5 md:p-6">
+      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-palette-selago to-white p-2 shadow-soft transition-transform duration-300 group-hover:scale-105 md:h-32 md:w-32 md:p-4">
+        <Image
+          src={image}
+          alt={name}
+          width={100}
+          height={100}
+          className="h-auto w-full object-contain"
+        />
+      </div>
+      <div className="flex min-w-0 flex-col gap-1.5 text-right md:items-center md:gap-2 md:text-center">
+        <h3 className="truncate text-[16px] font-bold text-palette-pearl md:text-[18px]">
+          {name}
+        </h3>
+        <span className="w-fit rounded-full bg-palette-secondary/10 px-3 py-1 text-[12px] font-semibold text-palette-secondary md:px-4 md:py-1.5 md:text-[13px]">
+          {role}
+        </span>
       </div>
     </div>
   );

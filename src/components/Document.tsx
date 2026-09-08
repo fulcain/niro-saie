@@ -20,45 +20,45 @@ const Document = ({
   ).split(" ");
 
   return (
-    <div className="document flex flex-col gap-5 border min-w-[320px] rounded-[5px]">
-      <div className="pdf-image flex flex-col relative pt-[40px]">
+    <div className="card card-hover group flex min-w-[300px] max-w-[360px] flex-col overflow-hidden rounded-2xl">
+      <div className="relative flex items-center justify-center bg-gradient-to-br from-palette-primary to-palette-pearl px-6 pb-7 pt-10">
         <Image
           src="/images/general/pdf.png"
-          width={0}
-          height={0}
-          layout="responsive"
+          width={80}
+          height={90}
           alt="pdf"
-          className="absolute !w-[140px] md:!w-[180px] left-[50%] translate-x-[-50%] top-[8px] z-[1]"
+          className="h-20 w-auto object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
         />
-        <div className="bg-palette-primary h-[50px] md:h-[70px]"></div>
-        <div className="bg-gray-100 h-[100px] md:h-[150px] relative">
-          <div className="absolute w-[55px] h-[55px] right-0 bottom-0 bg-palette-primary flex flex-col text-white items-center justify-center">
-            <span className="font-[700]">{day}</span>
-            <span>{month}</span>
-
-            <span className="bg-palette-primary w-[10px] h-[10px] absolute right-[50px] bottom-[50%] translate-y-[50%] rotate-[45deg]"></span>
-            <span className="text-[13px] text-gray-400 absolute right-[70px] bottom-[50%] translate-y-[50%]">
-              {year}
-            </span>
-          </div>
+        <div className="absolute bottom-3 left-3 flex flex-col items-center rounded-xl bg-white px-3 py-2 text-center shadow-soft">
+          <span className="text-[16px] font-extrabold leading-5 text-palette-primary">
+            {day}
+          </span>
+          <span className="text-[11px] font-semibold text-palette-gray">
+            {month}
+          </span>
+          <span className="text-[10px] text-gray-400">{year}</span>
         </div>
       </div>
-      <div className="flex flex-col gap-2 info p-5">
-        <h3 className="font-[700] text-[22px]">{title}</h3>
-        <p className="text-gray-700">{description}</p>
+
+      <div className="flex flex-1 flex-col gap-3 p-6">
+        <h3 className="text-[18px] font-bold text-palette-pearl">{title}</h3>
+        <p className="text-[13px] font-medium leading-6 text-slate-600">
+          {description}
+        </p>
       </div>
+
       {downloadLink && (
         <a
           href={downloadLink}
           download
-          className="flex items-center gap-2 text-[16px] text-palette-primary px-5 py-2"
+          className="mx-6 mb-6 flex items-center justify-center gap-2 rounded-xl bg-palette-secondary/10 py-2.5 text-[14px] font-bold text-palette-secondary transition hover:bg-palette-secondary hover:text-white"
         >
+          <FaDownload size={15} />
           <span>دانلود جزوه</span>
-          <FaDownload />
         </a>
       )}
     </div>
   );
 };
 
-export default Document;
+export default Document;

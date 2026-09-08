@@ -1,28 +1,10 @@
 @use "./documents/pagination";
 @use "./(landing)/(banner)/banner";
-@use "./(landing)/(contact-us)/contact-us";
 @use "./(landing)/(faq)/faq";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-* {
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-  scroll-margin-top: 150px;
-}
-
-.container {
-  width: 90vw;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  @media only screen and (max-width:768px) {
-    width: 100%;
-  }
-}
 
 @layer base {
   :root {
@@ -53,40 +35,98 @@
     --chart-5: 27 87% 67%;
   }
 
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
-}
-
-@layer base {
   * {
-    @apply border-border;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-margin-top: 110px;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "kern";
+  }
+
+  ::selection {
+    @apply bg-palette-secondary text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-palette-primary;
+    border-radius: 8px;
   }
 }
+
+.container {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding-inline: 16px;
+  }
+}
+
+@layer components {
+  /* ---------- Buttons ---------- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-[15px] font-semibold transition-all duration-300 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply btn bg-palette-secondary text-white shadow-glow hover:bg-palette-primary hover:shadow-card;
+  }
+
+  .btn-outline-light {
+    @apply btn border border-white/40 text-white backdrop-blur-sm hover:bg-white/10;
+  }
+
+  /* ---------- Section titles ---------- */
+  .section-title {
+    @apply flex flex-col items-center text-center;
+  }
+
+  .section-eyebrow {
+    @apply flex items-center gap-3 text-[15px] md:text-[17px] font-bold text-palette-secondary;
+  }
+
+  .section-eyebrow-line {
+    @apply h-[2px] w-8 rounded-full bg-gradient-to-l from-palette-secondary to-transparent;
+  }
+
+  .section-eyebrow-line-end {
+    @apply h-[2px] w-8 rounded-full bg-gradient-to-r from-palette-secondary to-transparent;
+  }
+
+  .section-heading {
+    @apply mt-3 text-[26px] md:text-[40px] font-extrabold leading-tight text-palette-pearl;
+  }
+
+  /* ---------- Cards ---------- */
+  .card {
+    @apply bg-white rounded-2xl border border-slate-200/80 shadow-soft transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1.5 hover:shadow-lift hover:border-palette-secondary/30;
+  }
+
+  /* ---------- Icon tile ---------- */
+  .icon-tile {
+    @apply flex items-center justify-center rounded-2xl bg-gradient-to-br from-palette-secondary to-palette-primary text-white shadow-glow;
+  }
+}

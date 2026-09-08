@@ -4,23 +4,22 @@ import Image from "next/image";
 
 const CallNow = () => {
   return (
-    <div className="flex flex-col p-2 items-center justify-center relative call-now h-[230px] w-[300px] bg-[url('/images/contact-us/call-now-bg.png')] bg-cover bg-no-repeat bg-center rounded-[8px]">
-      <div className="z-[2] bg-palette-primary rounded-full">
+    <div className="flex w-fit shrink-0 flex-col items-center gap-3 rounded-2xl bg-white/95 p-7 shadow-lift backdrop-blur-sm">
+      <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-palette-secondary to-palette-primary shadow-glow">
         <Image
           src="/images/contact-us/phone-call.svg"
-          width={60}
-          height={60}
+          width={40}
+          height={40}
           alt="phone call"
-          sizes="(max-width: 768px) 60px, 60px"
-          className="p-5 h-auto md:w-[84px] md:h-[84px]"
+          className="h-9 w-auto"
         />
       </div>
-      <div className="z-[2] mt-3 flex flex-col items-center justify-center gap-2">
-        <span className="text-[18px] font-bold">اکنون تماس بگیرید</span>
-        <LinkUnderLine text={phoneNumber} href={`tel:${phoneNumber}`} />
-      </div>
+      <span className="text-[17px] font-bold text-palette-pearl">
+        اکنون تماس بگیرید
+      </span>
+      <LinkUnderLine text={phoneNumber} href={`tel:${phoneNumber}`} />
     </div>
   );
 };
 
-export default CallNow;
+export default CallNow;

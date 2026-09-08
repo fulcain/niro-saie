@@ -10,7 +10,7 @@ import ContactUs from "./(contact-us)/ContactUs";
 
 export default function Home() {
   return (
-    <main className="grid gap-[50px]">
+    <main className="flex flex-col">
       <Hero />
       <CompanyStatus />
       <FaqSection />

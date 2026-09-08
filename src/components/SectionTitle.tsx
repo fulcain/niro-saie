@@ -6,17 +6,15 @@ const SectionTitle = ({
   subTitle: string;
 }) => {
   return (
-    <div className="title flex flex-col  items-center">
-      <div className="flex gap-2 justify-center items-center">
-        <span className="h-[2px] w-[30px] bg-palette-primary"></span>
-        <h5 className="text-[16px] md:text-[18px] text-palette-primary italic">
-          {subTitle}
-        </h5>
-        <span className="h-[2px] w-[30px] bg-palette-primary"></span>
+    <div className="section-title">
+      <div className="section-eyebrow">
+        <span className="section-eyebrow-line"></span>
+        <span>{subTitle}</span>
+        <span className="section-eyebrow-line-end"></span>
       </div>
-      <h2 className="text-palette-pearl text-[25px] md:text-[40px]">{title}</h2>
+      <h2 className="section-heading">{title}</h2>
     </div>
   );
 };
 
-export default SectionTitle;
+export default SectionTitle;

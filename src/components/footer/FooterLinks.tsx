@@ -9,13 +9,13 @@ type FooterLinksProps = {
 
 const FooterLinks = ({ title, links }: FooterLinksProps) => {
   return (
-    <div className="flex flex-col gap-y-5">
-      <span className="text-white text-[18px]">{title}</span>
-      <div className="flex flex-col gap-y-2.5">
+    <div className="flex flex-col gap-6">
+      <span className="text-[18px] font-bold text-white">{title}</span>
+      <div className="flex flex-col gap-3">
         {links.map((link, idx) => (
           <Link
             key={idx}
-            className="text-palette-gray"
+            className="w-fit text-[14px] text-palette-gray transition hover:text-white"
             href={link.href || ""}
             scroll={false}
           >
@@ -27,4 +27,4 @@ const FooterLinks = ({ title, links }: FooterLinksProps) => {
   );
 };
 
-export default FooterLinks;
+export default FooterLinks;

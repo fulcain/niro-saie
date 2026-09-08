@@ -1,65 +1,33 @@
-import Image from "next/image";
 import { companyStatusData } from "./companyStatusData";
+import { Trophy, TrendingUp, Megaphone, MonitorSmartphone } from "lucide-react";
+
+const icons = [Trophy, TrendingUp, Megaphone, MonitorSmartphone];
 
 const CompanyStatusItems = () => {
-  const divider1 = (
-    <Image
-      src="/images/company-status/divider-1.svg"
-      width={95}
-      height={30}
-      alt="divider 1"
-      className="hidden md:block mb-[120px] absolute left-[-50px] top-[80px]"
-    />
-  );
-
-  const divider2 = (
-    <Image
-      src="/images/company-status/divider-2.svg"
-      width={95}
-      height={30}
-      alt="divider 2"
-      className="hidden lg:block mb-[120px] absolute left-[-50px] top-[80px]"
-    />
-  );
-
   return (
-    <div className="flex md:items-start items-center justify-center">
-      <div className="grid place-items-start sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-[320px] md:max-w-none mt-[60px]">
-        {companyStatusData.map((item, idx) => {
-          const isEven = idx % 2 === 0;
-          const isLast = idx === companyStatusData.length - 1;
+    <div className="mt-8 grid grid-cols-2 gap-3 md:mt-14 md:gap-6 lg:grid-cols-4">
+      {companyStatusData.map((item, idx) => {
+        const Icon = icons[idx % icons.length];
 
-          // must not be last and chosen based on being odd or even
-          const divider = !isLast ? (isEven ? divider1 : divider2) : null;
-
-          return (
-            <div
-              key={idx}
-              className="flex items-center justify-center relative"
-            >
-              <div className="flex items-center gap-6 justify-center flex-col">
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={200}
-                  height={155}
-                />
-                <div className="flex flex-col gap-2 items-center justify-center text-center">
-                  <h3 className="text-[18px] text-palette-pearl">
-                    {item.title}
-                  </h3>
-                  <p className="text-[14px] text-palette-gray">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-              {divider}
+        return (
+          <div
+            key={idx}
+            className="card card-hover group flex flex-col items-center gap-3 p-4 text-center md:gap-5 md:p-7"
+          >
+            <div className="icon-tile h-10 w-10 text-[18px] transition-transform duration-300 group-hover:scale-110 md:h-16 md:w-16 md:text-[26px]">
+              <Icon />
             </div>
-          );
-        })}
-      </div>
+            <h3 className="text-[14px] font-extrabold leading-6 text-palette-pearl md:text-[18px] md:font-bold md:leading-snug">
+              {item.title}
+            </h3>
+            <p className="text-[11.5px] font-medium leading-5 text-slate-600 md:text-[14px] md:font-normal md:leading-7">
+              {item.description}
+            </p>
+          </div>
+        );
+      })}
     </div>
   );
 };
 
-export default CompanyStatusItems;
+export default CompanyStatusItems;

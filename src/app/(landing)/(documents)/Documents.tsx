@@ -34,12 +34,12 @@ const Documents = () => {
   const lastDocuments = getDocumentsForView(deviceType);
 
   return (
-    <section id="documents">
-      <div className="container flex flex-col gap-[40px]">
+    <section id="documents" className="py-12 md:py-24">
+      <div className="container flex flex-col gap-8 md:gap-12">
         <SectionTitle subTitle="جزوه های درسی" title="آخرین جزوه ها" />
         <div
           id="documents-list"
-          className="flex flex-wrap justify-center gap-10"
+          className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
           {documents.length >= 1 ? (
             lastDocuments.map((item, idx) => (
@@ -58,9 +58,11 @@ const Documents = () => {
           )}
         </div>
         {documents.length ? (
-          <button className="bg-palette-primary text-white rounded-[8px] w-fit p-2 font-[200] self-center text-[14px] cursor-pointer hover:bg-palette-pearl transition duration-500">
-            <Link href="/documents">مشاهده لیست جزوه ها</Link>
-          </button>
+          <div className="flex justify-center">
+            <Link href="/documents" className="btn-primary">
+              مشاهده لیست جزوه ها
+            </Link>
+          </div>
         ) : null}
       </div>
     </section>

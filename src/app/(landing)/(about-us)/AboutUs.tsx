@@ -1,34 +1,36 @@
 import SectionTitle from "@/components/SectionTitle";
 import { appName } from "@/constants";
-import Image from "next/image";
+
+const stats = [
+  { value: "۱۴۰۱", label: "سال تأسیس" },
+  { value: "۱۴۰۳", label: "اخذ مجوزهای رسمی" },
+  { value: "برق و انرژی", label: "حوزه تخصصی" },
+];
 
 const AboutUs = () => {
   return (
-    <section className="flex flex-col gap-[40px]" id="about-us">
+    <section className="flex flex-col gap-10 py-12 md:gap-12 md:py-24" id="about-us">
       <SectionTitle subTitle="درباره ما" title={appName} />
-      <div className="content flex relative items-center p-5 min-h-[400px] bg-palette-pearl overflow-hidden">
-        <Image
-          src="/images/footer/footer-circle.png"
-          alt="footer shape"
-          width={180}
-          height={130}
-          className="hidden md:block animate-scales absolute right-[-110px]"
-        />
+      <div className="relative overflow-hidden bg-gradient-to-l from-palette-mirage via-palette-pearl to-palette-pearl">
+        {/* Decorative glows */}
+        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-palette-secondary/20 blur-3xl"></div>
+        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-palette-primary/40 blur-3xl"></div>
 
-        <div className="container flex flex-col gap-5">
-          <div className="title max-w-[650px] flex flex-col gap-2">
-            <div className="flex items-center gap-2">
-              <span className="h-[2px] w-[15px] bg-palette-secondary"></span>
-              <h5 className="text-[16px] md:text-[18px] text-palette-secondary italic">
+        <div className="container relative flex flex-col gap-10 py-16 md:py-20">
+          <div className="flex max-w-3xl flex-col gap-4">
+            <div className="flex items-center gap-3">
+              <span className="h-[3px] w-10 rounded-full bg-gradient-to-l from-palette-secondary to-transparent"></span>
+              <h5 className="text-[15px] md:text-[17px] font-bold text-palette-secondary">
                 درباره شرکت ما
               </h5>
             </div>
-            <h3 className="text-[18px] md:text-[30px] font-bold text-white ">
+            <h3 className="text-[20px] md:text-[30px] font-extrabold leading-snug text-white">
               ما در خدمات مهندسی، پیمانکاری و مشاوره تخصص داریم و پروژه های
               صنعتی را طراحی و اجرا میکنیم.
             </h3>
           </div>
-          <p className="text-gray-200 text-[13px] md:text-[16px]">
+
+          <p className="max-w-4xl text-[14px] md:text-[16px] leading-8 text-slate-300">
             {appName} در سال ۱۴۰۱ با هدف ارائه خدمات تخصصی در حوزه صنعت برق و با
             همت جمعی از مهندسان باتجربه و متخصص تأسیس شد. از همان ابتدا، تمرکز
             اصلی ما بر ارائه خدمات باکیفیت، نوآورانه و مطابق با استانداردهای روز
@@ -42,17 +44,24 @@ const AboutUs = () => {
             می‌باشد و همواره در تلاش است تا گامی مؤثر در ارتقاء این صنعت و توسعه
             زیرساخت‌های کشور بردارد.
           </p>
+
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
+            {stats.map((stat, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center gap-1 rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-center backdrop-blur-sm sm:px-6 sm:py-5"
+              >
+                <span className="text-[22px] md:text-[28px] font-extrabold text-palette-secondary">
+                  {stat.value}
+                </span>
+                <span className="text-[13px] text-slate-300">{stat.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <Image
-          src="/images/footer/footer-circle.png"
-          alt="footer shape"
-          width={180}
-          height={130}
-          className="hidden absolute left-[-100px] md:block animate-scales"
-        />
       </div>
     </section>
   );
 };
 
-export default AboutUs;
+export default AboutUs;

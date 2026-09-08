@@ -20,7 +20,10 @@ const PaginatedItems = ({ itemsPerPage }: { itemsPerPage: number }) => {
 
   return (
     <>
-      <div id="documents-list" className="flex flex-wrap justify-center gap-10">
+      <div
+        id="documents-list"
+        className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3"
+      >
         {currentItems.length >= 1 ? (
           currentItems.map((item, idx) => (
             <Document

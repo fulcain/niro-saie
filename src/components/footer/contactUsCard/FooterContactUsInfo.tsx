@@ -7,18 +7,28 @@ type FooterContactUsInfoProps = {
 
 const FooterContactUsInfo = ({ info }: FooterContactUsInfoProps) => {
   return (
-    <div className="flex flex-col items-start">
-      <div className="flex flex-row gap-2 justify-center items-center">
-        <div>{info.icon}</div>
+    <div className="flex items-start gap-3">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-palette-secondary/15 text-palette-secondary">
+        {info.icon}
+      </span>
+      <div className="flex flex-col gap-0.5 text-[13px] leading-6">
         {info.href ? (
-          <LinkUnderLine text={info.title} href={info.href} />
+          <LinkUnderLine
+            text={info.title}
+            href={info.href}
+            className="text-white/90 hover:text-palette-secondary"
+          />
         ) : (
-          info.title
+          <span className="text-palette-gray">{info.title}</span>
+        )}
+        {info.subTitle && (
+          <span className="text-[12px] text-palette-gray/70">
+            {info.subTitle}
+          </span>
         )}
       </div>
-      {info.subTitle && <div>{info.subTitle}</div>}
     </div>
   );
 };
 
-export default FooterContactUsInfo;
+export default FooterContactUsInfo;

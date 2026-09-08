@@ -12,19 +12,19 @@ export const footerContactUs: FooterContactUsTypes[] = [
   {
     title: "ساعت کاری:",
     subTitle: "۷ صبح تا ۵ بعد از ظهر",
-    icon: <FaRegClock className="text-palette-primary" />,
+    icon: <FaRegClock />,
   },
   {
     title:
       "ایران، بوشهر، ریشهر، خیابان سلمان فارسی، خیابان پارسیان، نبش کوچه قلعه یک",
     subTitle: "",
-    icon: <FaMapMarkerAlt className="text-palette-primary" />,
+    icon: <FaMapMarkerAlt />,
     href: `${address}`,
   },
   {
     title: phoneNumber,
     subTitle: "",
-    icon: <FaPhoneAlt className="text-palette-primary" />,
+    icon: <FaPhoneAlt />,
     href: `tel:${phoneNumber}`,
   },
 ];

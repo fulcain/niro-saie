@@ -16,6 +16,12 @@ export default {
       screens: {
         "between-lg-md": "1154px",
       },
+      boxShadow: {
+        soft: "0 4px 20px rgb(5 29 31 / 0.06)",
+        card: "0 8px 30px rgb(5 29 31 / 0.08)",
+        lift: "0 18px 45px rgb(5 29 31 / 0.14)",
+        glow: "0 8px 30px rgb(61 114 252 / 0.35)",
+      },
       keyframes: {
         scales: {
           "0%": {

@@ -4,15 +4,26 @@ import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
 import Document from "@/components/Document";
 import { documents } from "@/data/documents";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+const mediaQuery = "(max-width: 800px)";
+
+const subscribe = (onChange: () => void) => {
+  const mql = window.matchMedia(mediaQuery);
+  mql.addEventListener("change", onChange);
+  return () => mql.removeEventListener("change", onChange);
+};
+
+const getSnapshot = () => window.matchMedia(mediaQuery).matches;
+const getServerSnapshot = () => false;
 
 const Documents = () => {
-  const [deviceType, setDeviceType] = useState<"desktop" | "mobile">("desktop");
-
-  useEffect(() => {
-    const isMobile = window.matchMedia("(max-width: 800px)").matches;
-    setDeviceType(isMobile ? "mobile" : "desktop");
-  }, []);
+  const isMobile = useSyncExternalStore(
+    subscribe,
+    getSnapshot,
+    getServerSnapshot
+  );
+  const deviceType: "desktop" | "mobile" = isMobile ? "mobile" : "desktop";
 
   const getDocumentsForView = (deviceType: string) => {
     return deviceType === "mobile"

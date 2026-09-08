@@ -1,7 +1,7 @@
-@use "/src/app/documents/pagination";
-@use "/src/app/(landing)/(banner)/banner";
-@use "/src/app/(landing)/(contact-us)/contact-us";
-@use "/src/app/(landing)/(faq)/faq";
+@use "./documents/pagination";
+@use "./(landing)/(banner)/banner";
+@use "./(landing)/(contact-us)/contact-us";
+@use "./(landing)/(faq)/faq";
 
 @tailwind base;
 @tailwind components;

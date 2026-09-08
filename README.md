@@ -1,58 +1,67 @@
-# Client Project
+# Niro Saie Darakhsh (NSD)
 
-This repository is for a client project developed for **Niro Saie Darakhsh**, a company specializing in engineering, contracting, and consulting services with a focus on industrial projects.
+Company website for **نیرو ساعی درخش** — a Persian (RTL) corporate site built with the Next.js App Router.
 
-## Project Overview
+## Tech Stack
 
-The purpose of this project is to provide a tailored solution that meets the client's specific needs within the scope of their operations in the electrical industry. As the developer, my role is to ensure the successful implementation of the required features, while maintaining high-quality standards in the codebase.
+- **[Next.js](https://nextjs.org) 16** — App Router, builds with Turbopack
+- **[React](https://react.dev) 19**
+- **TypeScript**
+- **Tailwind CSS 3** + **Sass** (`globals.scss` + per-section `_*.scss` partials)
+- **ESLint 9** with flat config (`eslint.config.mjs`) via `eslint-config-next`
+- **[Vazirmatn](https://vazirmatn.com)** loaded through `next/font/google`
 
-## Features
+Key libraries: `@radix-ui/react-accordion`, `swiper`, `react-paginate`, `date-fns-jalali`, `lucide-react`, `react-icons`, `class-variance-authority`, `tailwind-merge`, `tailwindcss-animate`.
 
-- Customized functionality to address the client’s requirements.
-- Scalable and maintainable architecture.
-- High performance and responsiveness.
-- Compliance with industry best practices and standards.
+## Getting Started
 
-## Technologies Used
+Requirements: Node.js 20.9+ (Next.js 16 requirement; Node 22+ recommended).
 
-- **Frontend**: NextJS, TypeScript
+```bash
+npm install
+npm run dev
+```
 
-## Development Notes
+Open [http://localhost:3000](http://localhost:3000) — the site renders right-to-left in Persian.
 
-This project is structured to ensure:
+## Scripts
 
-- **Modularity**: Clean separation of concerns for maintainable code.
-- **Scalability**: Designed to handle future enhancements with ease.
-- **Documentation**: Comprehensive inline documentation and external guides.
+| Script          | Description                                |
+| --------------- | ------------------------------------------ |
+| `npm run dev`   | Start the development server (Turbopack)   |
+| `npm run build` | Create an optimized production build       |
+| `npm run start` | Serve the production build                 |
+| `npm run lint`  | Run ESLint (`eslint .`) over the project   |
 
-## Setup
+## Project Structure
 
-To run this project locally:
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout: fonts, metadata, header/footer
+│   ├── globals.scss        # Global styles + Tailwind layers + section partials
+│   ├── (landing)/          # Home page route group (/, one section per folder)
+│   │   ├── page.tsx        # Home page assembling all sections
+│   │   ├── (hero)/         # Hero section
+│   │   ├── (services)/     # Services section
+│   │   ├── (faq)/          # FAQ (Radix accordion) section
+│   │   └── ...             # banner, about-us, contact-us, documents, personel
+│   └── documents/          # /documents route — paginated study-note list
+│       ├── page.tsx
+│       └── PaginatedItems.tsx
+├── components/             # Shared components (footer, header, ui, ...)
+├── data/                   # Static content (documents.ts)
+├── constants/              # App constants
+├── helpers/                # Utilities (convertToPersianDate.ts)
+└── lib/                    # Shared utilities (utils.ts, cn())
+```
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   ```
+## Troubleshooting
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+- **`Module not found: Can't resolve '@vercel/turbopack-next/internal/font/...'` in dev** — a dev server left running across an `npm install` keeps a stale module graph. Restart `npm run dev`.
+- **`Cannot find module for page: /_document` (or `/_not-found`) during `next build`** — usually a stale `.next` cache; delete it with `rm -rf .next` and rebuild.
+- **Windows `EPERM` warnings during `npm install`** — a running dev server holds locks on `next`/`sharp` binaries; stop it before installing.
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+## Deploy
 
-## Contribution
-
-As this is a client project, contributions are not accepted unless explicitly approved. For any inquiries, please contact the developer.
-
-## License
-
-This project is proprietary and is not open for public use or distribution.
-
----
-
-Thank you for reviewing this documentation. Please reach out if you have any questions or need further assistance with this project.
-
+The site is deployed on [Vercel](https://vercel.com). See the [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying) for details.
